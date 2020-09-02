@@ -33,6 +33,8 @@ class DishDetail extends Component{
                 <li>
                     <p>{comments.comment}</p>
                     <p>--{comments.author},  {moment(comments.date).format('MMM DD, YYYY')}</p>
+                    <p>{new Intl.DateTimeFormat('en-US',{ year: 'numeric', month: 'short', day:'2-digit'}).format(new Date(Date.parse(comments.date)))}
+                    </p>
                 </li>
                 );    
             });
