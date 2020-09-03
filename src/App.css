@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+gu.row-header {
+    margin: 0px auto;
+    padding: 0px 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.row-content {
+    margin: 0px auto;
+    padding: 50px 0px;
+    border-bottom: 1px ridge;
+    min-height: 400px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.footer {
+    background-color: #D1C4E9;
+    margin: 0px auto;
+    padding: 20px 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.jumbotron {
+    margin: 0px auto;
+    padding: 70px 30px;
+    background-color: #9575CD;
+    color: floralwhite;
 }
 
-.App-link {
-  color: #61dafb;
+address {
+    font-size: 80%;
+    margin: 0px;
+    color: #0f0f0f;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-dark {
+    background-color: #512DA8;
 }
+
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.carousel {
+    background: #512DA8;
+}
+
+.carousel .carousel-item {
+    height: 300px;
+}
+
+.carousel .carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;
+}
+
+#carouselButton {
+    right: 0px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.modal .modal-header {
+    background-color: #512DA8;
+}
+
+.modal .modal-header .close {
+    color: floralwhite;
+}
+
+.modal .modal-header .modal-title {
+    color: floralwhite;
+}
+
+.modal .modal-body {
+    background-color: #D1C4E9;
+}
+
+
+/*# sourceMappingURL=style.css.map */
