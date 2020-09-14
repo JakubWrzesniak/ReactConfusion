@@ -74,7 +74,7 @@ class Header extends Component{
                                     <span className="fa fa-sign-in fa-lg"/> Login
                                 </Button>
                             </NavItem>
-                        </Nav>
+                        </Nav> 
                     </Collapse>
                 </div>  
             </Navbar>
