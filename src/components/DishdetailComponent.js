@@ -50,7 +50,7 @@ function RenderComments({comments}){
     }
 }
 
-function DishDetail(props){
+const DishDetail  = (props) => {
     if(props.dish!=null){
         return(
             <div className="container">
