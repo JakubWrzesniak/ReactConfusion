@@ -25,13 +25,13 @@ function RenderDish({dish}){
     }
 }
 
-function RenderComments({comments}){
+function RenderComments({comments, addComment,dishId}){
     if(comments!=null){
         const commentsList = comments.map((comments) => {
         return(
             <li>
                 <p>{comments.comment}</p>
-                <p>{new Intl.DateTimeFormat('en-US',{ year: 'numeric', month: 'short', day:'2-digit'}).format(new Date(Date.parse(comments.date)))}</p>
+                <p>--{comments.author} {new Intl.DateTimeFormat('en-US',{ year: 'numeric', month: 'short', day:'2-digit'}).format(new Date(Date.parse(comments.date)))}</p>
             </li>
             );    
         });
@@ -41,7 +41,7 @@ function RenderComments({comments}){
                 <ul className="list-unstyled">
                     <h4>Comments</h4>
                     {commentsList}
-                    <CommentForm />
+                    <CommentForm dishId={dishId} addComment={addComment}/>
                 </ul>
             </div>
         )
@@ -66,7 +66,9 @@ const DishDetail  = (props) => {
                 </div>
                 <div className="row">
                     <RenderDish dish={props.dish}/>
-                    <RenderComments comments ={props.comments}/>
+                    <RenderComments comments ={props.comments}
+                        addComment={props.addComment}
+                        dishId={props.dish.id}/>
                     
                 </div>
             </div>
@@ -86,15 +88,14 @@ class CommentForm extends Component{
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleSubmit(values){
-        console.log("Current State is: " + JSON.stringify(values));
-        alert("Current State is: " + JSON.stringify(values));
-    }
-
     toggleModal(){
         this.setState({
             isModalOpen: !this.state.isModalOpen
         });
+    }
+    handleSubmit(values){
+        this.toggleModal();
+        this.props.addComment(this.props.dishId, values.rating, values.author, values.comment);
     }
     render(){
         return(
