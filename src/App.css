@@ -61,23 +61,27 @@ address {
     bottom: 0px;
 }
 
-
-/*.modal .modal-header {
-    background-color: #512DA8;
+.page-enter {
+    opacity: 0.01;
+    transform: translateX(-100%);
 }
 
-.modal .modal-header .close {
-    color: floralwhite;
+.page-enter-active {
+    opacity: 1;
+    transform: translateX(0%);
+    transition: all 300ms ease-in;
 }
 
-.modal .modal-header .modal-title {
-    color: floralwhite;
+.page-exit {
+    opacity: 1;
+    transform: translateX(0%);
 }
 
-.modal .modal-body {
-    background-color: #D1C4E9;
+.page-exit-active {
+    opacity: 0.01;
+    transform: translateX(100%);
+    transition: all 300ms ease-out;
 }
-*/
 
 
 /*# sourceMappingURL=style.css.map */
